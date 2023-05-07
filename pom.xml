@@ -19,8 +19,8 @@
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>0.0.8</version>
                 <configuration>
-                    <mainClass>Hello</mainClass>
-                    <executable>C:\Users\al415648\.jdks\corretto-19.0.2\bin\java.exe</executable>
+                    <mainClass>uji.al415648.interfaz.Controller</mainClass>
+                    <executable>C:\Users\hugom\.jdks\openjdk-20.0.1\bin\java.exe</executable>
                 </configuration>
             </plugin>
         </plugins>
