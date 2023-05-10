@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ec25f69-acab-4292-afb0-4f60e89e4d51" name="Changes" comment="Empezamos:">
-      <change afterPath="$PROJECT_DIR$/src/main/java/uji/al415648/interfaz/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uji/al415648/interfaz/View.java" afterDir="false" />
+    <list default="true" id="7ec25f69-acab-4292-afb0-4f60e89e4d51" name="Changes" comment="Commit 1;">
+      <change afterPath="$PROJECT_DIR$/src/main/java/uji/al415648/interfaz/Model.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Hello.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uji/al415648/interfaz/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uji/al415648/interfaz/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uji/al415648/interfaz/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uji/al415648/interfaz/View.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +44,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/al415648/IdeaProjects/Practica4/src/main/java&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/hugom/IdeaProjects/Practica4/src/main/java/uji/al415648/lectura&quot;,
     &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
@@ -53,7 +53,12 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\hugom\IdeaProjects\Practica4\src\main\java\uji\al415648\lectura" />
       <recent name="C:\Users\al415648\IdeaProjects\Practica4\src\main\java" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\hugom\IdeaProjects\Practica4\src\main\java\uji\al415648\interfaz" />
+      <recent name="C:\Users\hugom\IdeaProjects\Practica4" />
     </key>
   </component>
   <component name="RunManager" selected="Application.View">
@@ -69,7 +74,7 @@
       <module name="Practica4" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="uji.al415648.interfaz.*" />
+          <option name="PATTERN" value="uji.al415648.interfaz.Model" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -101,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682421692800</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Commit 1;">
+      <created>1683487218154</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1683487218154</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,6 +133,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Primeros pasos en javafx" />
-    <option name="LAST_COMMIT_MESSAGE" value="Primeros pasos en javafx" />
+    <MESSAGE value="Commit 1;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit 1;" />
   </component>
 </project>

@@ -6,17 +6,10 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class Controller extends Application {//pasarlo como controlador
-
-    public static void main(String[] args) {
-        launch(args);
-    }
-
+public class Controller extends Application {
     @Override
-    public void start(Stage primaryStage) throws IOException {  //FALTA ACABARLO
-        primaryStage.setTitle("Song Recommender");
-        View vista=new View();
-        primaryStage.show();
-    }
+    public void start(Stage stage) throws Exception {
+
+    }//pasarlo como controlador
 
 }
