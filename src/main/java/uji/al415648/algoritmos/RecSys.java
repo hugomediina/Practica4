@@ -44,4 +44,8 @@ public class RecSys {
         }
         return -1;
     }
+    public Integer getSize(String nameLikedItem){
+        int group=getIdx(nameLikedItem);
+        return groups.get(group).size();
+    }
 }

@@ -4,12 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ec25f69-acab-4292-afb0-4f60e89e4d51" name="Changes" comment="Commit 1;">
-      <change afterPath="$PROJECT_DIR$/src/main/java/uji/al415648/interfaz/Model.java" afterDir="false" />
+    <list default="true" id="7ec25f69-acab-4292-afb0-4f60e89e4d51" name="Changes" comment="Vista acabada">
+      <change afterPath="$PROJECT_DIR$/src/main/java/uji/al415648/interfaz/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uji/al415648/interfaz/controlador/Controlador.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uji/al415648/interfaz/modelo/Modelo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uji/al415648/interfaz/vista/ViewSecundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uji/al415648/interfaz/vista/Vista.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uji/al415648/interfaz/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uji/al415648/interfaz/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uji/al415648/interfaz/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uji/al415648/interfaz/View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uji/al415648/algoritmos/RecSys.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uji/al415648/algoritmos/RecSys.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uji/al415648/interfaz/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uji/al415648/interfaz/controlador/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uji/al415648/interfaz/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uji/al415648/interfaz/modelo/Model.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uji/al415648/interfaz/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uji/al415648/interfaz/vista/View.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +26,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -57,24 +64,25 @@
       <recent name="C:\Users\al415648\IdeaProjects\Practica4\src\main\java" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\hugom\IdeaProjects\Practica4\src\main\java\uji\al415648\algoritmos" />
       <recent name="C:\Users\hugom\IdeaProjects\Practica4\src\main\java\uji\al415648\interfaz" />
       <recent name="C:\Users\hugom\IdeaProjects\Practica4" />
     </key>
   </component>
   <component name="RunManager" selected="Application.View">
     <configuration name="Controller" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="uji.al415648.interfaz.Controller" />
+      <option name="MAIN_CLASS_NAME" value="uji.al415648.interfaz.controlador.Controller" />
       <module name="Practica4" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="View" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="uji.al415648.interfaz.View" />
+      <option name="MAIN_CLASS_NAME" value="uji.al415648.interfaz.vista.View" />
       <module name="Practica4" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="uji.al415648.interfaz.Model" />
+          <option name="PATTERN" value="uji.al415648.interfaz.modelo.Model" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -113,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683487218154</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Vista acabada">
+      <created>1683738519392</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1683738519392</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,6 +149,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Primeros pasos en javafx" />
     <MESSAGE value="Commit 1;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit 1;" />
+    <MESSAGE value="Vista acabada" />
+    <option name="LAST_COMMIT_MESSAGE" value="Vista acabada" />
   </component>
 </project>
