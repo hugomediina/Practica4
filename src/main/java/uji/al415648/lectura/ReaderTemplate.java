@@ -1,8 +1,6 @@
 package uji.al415648.lectura;
 
-import uji.al415648.datos.Row;
 import uji.al415648.datos.Table;
-import uji.al415648.datos.TableWithLabels;
 
 import java.io.FileNotFoundException;
 

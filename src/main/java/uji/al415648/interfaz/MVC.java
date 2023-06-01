@@ -6,7 +6,7 @@ import uji.al415648.interfaz.controlador.Controller;
 import uji.al415648.interfaz.modelo.Model;
 import uji.al415648.interfaz.vista.View;
 
-public class Main extends Application {
+public class MVC extends Application {
     public static void main(String[] args) {
         launch(args);
     }

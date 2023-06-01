@@ -2,6 +2,7 @@ package uji.al415648.interfaz.vista;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.HBox;
@@ -10,14 +11,14 @@ import javafx.stage.Stage;
 import uji.al415648.distancias.Distance;
 import uji.al415648.distancias.EuclideanDistance;
 import uji.al415648.distancias.ManhattanDistance;
-import uji.al415648.interfaz.controlador.Controlador;
-import uji.al415648.interfaz.modelo.Modelo;
+import uji.al415648.interfaz.controlador.InterfaceController;
+import uji.al415648.interfaz.modelo.InterfaceModel;
 
 import java.util.List;
 
-public class ViewSecundary implements Vista{
-    private Controlador controller;
-    private Modelo modelo;
+public class ViewSecundary implements InterfaceView {
+    private InterfaceController controller;
+    private InterfaceModel interfaceModel;
     private ListView<String> recommendedSongs;
     private List<String> recomend;
     private Stage stage;
@@ -43,34 +44,37 @@ public class ViewSecundary implements Vista{
         button.setOnAction(buttonActivation->{
             stage.close();
         });
-        recomend=modelo.getRecsys().recommend(nameSong, spinner.getValue());
+        recomend=interfaceModel.createRecommendation(nameSong,spinner.getValue());
         setList();
-
         spinner.valueProperty().addListener((observableValue, integer, t1) -> {
-            recomend=modelo.getRecsys().recommend(nameSong, t1);
+            recomend= interfaceModel.createRecommendation(nameSong,t1);
             setList();
         });
-
         makeVBox();
-        Scene scene=new Scene(vBox,300,500);
+        Scene scene=new Scene(vBox,400,300);
+        stage.setTitle("A recommendation based on " + nameSong);
         stage.setScene(scene);
         stage.show();
     }
 
     @Override
-    public void setModelo(Modelo modelo) {
-        this.modelo=modelo;
+    public void setModelo(InterfaceModel interfaceModel) {
+        this.interfaceModel = interfaceModel;
     }
 
     @Override
-    public void setControlador(Controlador controlador) {
-        this.controller=controlador;
+    public void setControlador(InterfaceController interfaceController) {
+        this.controller= interfaceController;
     }
 
     @Override
     public void makeLabels() {
-        label=new Label("Number of recommendations");
+        label=new Label("Number of recommendations (MAX "+ interfaceModel.getRecsys().getSize(nameSong)+")");
+        label.setPadding(new Insets(10,10,10,10));
+        label.setLineSpacing(5);
         label1=new Label("If you liked "+nameSong+" you might like");
+        label1.setPadding(new Insets(10,10,10,10));
+        label1.setLineSpacing(5);
     }
 
     @Override
@@ -83,7 +87,7 @@ public class ViewSecundary implements Vista{
     public void makeButton() {
         spinner=new Spinner<>();
         spinner.setEditable(true);
-        spinner.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(1,modelo.getRecsys().getSize(nameSong),5));
+        spinner.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(1, interfaceModel.getRecsys().getSize(nameSong),5));
         button=new Button("Close");
     }
 
@@ -103,7 +107,7 @@ public class ViewSecundary implements Vista{
             searchmethod=new EuclideanDistance();
         else
             searchmethod=new ManhattanDistance();
-        modelo.recommender(method,searchmethod);
+        interfaceModel.recommender(method,searchmethod);
     }
 
 }

@@ -1,13 +1,8 @@
-package uji.al415648.interfaz.modelo;
-import javafx.stage.Stage;
-import uji.al415648.algoritmos.Algorithm;
-import uji.al415648.algoritmos.KNN;
-import uji.al415648.algoritmos.Kmeans;
-import uji.al415648.algoritmos.RecSys;
+package uji.al415648.algoritmos;
+
 import uji.al415648.datos.Table;
 import uji.al415648.distancias.Distance;
-import uji.al415648.interfaz.vista.InterfaceView;
-import uji.al415648.interfaz.vista.ViewSecundary;
+import uji.al415648.distancias.EuclideanDistance;
 import uji.al415648.lectura.CSV;
 
 import java.io.BufferedReader;
@@ -18,16 +13,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Model implements InterfaceModel {
-    private InterfaceView interfaceView;
-
+class SongRecSys {
     private RecSys recsys;
 
-    public void setVista(InterfaceView interfaceView){
-        this.interfaceView = interfaceView;
-    }
-
-    public void recommender(String method, Distance distance) throws Exception {
+    SongRecSys(String method, Distance distance) throws Exception {
         String sep = System.getProperty("file.separator");
         String ruta = "lib";
 
@@ -39,7 +28,7 @@ public class Model implements InterfaceModel {
         filenames.put("kmeans"+"test","songs_test_withoutnames.csv");
 
         // Algorithms
-        Map<String, Algorithm> algorithms = new HashMap<>();
+        Map<String,Algorithm> algorithms = new HashMap<>();
         algorithms.put("knn",new KNN(distance));
         algorithms.put("kmeans",new Kmeans(15, 200, 4321,distance));
 
@@ -60,9 +49,15 @@ public class Model implements InterfaceModel {
         this.recsys.train(tables.get(method+"train"));
         this.recsys.run(tables.get(method+"test"), names);
 
+        // Given a liked item, ask for a number of recomendations
+        String liked_name = "Lootkemia";
+        List<String> recommended_items = this.recsys.recommend(liked_name,5);
 
+        // Display the recommendation text (to be replaced with graphical display with JavaFX implementation)
+        reportRecommendation(liked_name,recommended_items);
     }
-    public List<String> readNames(String fileOfItemNames) throws IOException {
+
+    private List<String> readNames(String fileOfItemNames) throws IOException {
         BufferedReader br = new BufferedReader(new FileReader(fileOfItemNames));
         String line;
         List<String> names = new ArrayList<>();
@@ -74,18 +69,16 @@ public class Model implements InterfaceModel {
         return names;
     }
 
-    public RecSys getRecsys() {
-        return recsys;
-    }
-    public List<String> createRecommendation(String nameSong, int spinner){
-       return recsys.recommend(nameSong, spinner);
+    private void reportRecommendation(String liked_name, List<String> recommended_items) {
+        System.out.println("If you liked \""+liked_name+"\" then you might like:");
+        for (String name : recommended_items)
+        {
+            System.out.println("\t * "+name);
+        }
     }
 
-    @Override
-    public InterfaceView createNewView(Stage stage, String algorithm, String distance, String song) throws Exception {
-        return new ViewSecundary(stage, algorithm,  distance,  song);
-    }
-    public void secondViewThrow() throws Exception {
-        interfaceView.generateGUI();
+    public static void main(String[] args) throws Exception {
+        new SongRecSys("knn", new EuclideanDistance());
+        new SongRecSys("kmeans",new EuclideanDistance());
     }
 }
